@@ -4,7 +4,7 @@
 
 > 由于用手机APP缓存的B站视频是音视频分离的`m4s`格式，不能够直接播放，该项目将缓存视频转换成能直接播放的MP4格式
 
-本项目使用Flutter开发，借助`ffmpeg_kit`完成视频的转换
+本项目使用flutter开发，借助`ffmpeg_kit`完成视频的转换
 
 项目依赖如下：
 
@@ -19,9 +19,29 @@ dependencies:
   ffmpeg_kit_flutter_full_gpl: 4.5.1-LTS
 ```
 
+
+
+<table>
+    <tr>
+        <td>
+            <img src="./assets/Screenshot_2.jpg" alt="1" />
+        </td>
+        <td>
+            <img src="./assets/Screenshot_3.jpg" alt="2" />
+        </td>
+        <td>
+            <img src="./assets/Screenshot_1.jpg" alt="3" />
+        </td>
+    </tr>
+</table>
+
+
+
+
+
 ## 使用说明
 
-1、下载并安装`APP`
+1、下载并安装[APP](https://github.com/ten1fs/bcvt/releases/tag/v1.1)
 
 2、选择要合并的视频和音频
 
