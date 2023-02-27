@@ -1,16 +1,35 @@
-# bcvt
+# B站缓存视频转MP4
 
-B站缓存视频转MP4
+## 项目介绍
 
-## Getting Started
+> 由于用手机APP缓存的B站视频是音视频分离的`m4s`格式，不能够直接播放，该项目将缓存视频转换成能直接播放的MP4格式
 
-This project is a starting point for a Flutter application.
+本项目使用Flutter开发，借助`ffmpeg_kit`完成视频的转换
 
-A few resources to get you started if this is your first Flutter project:
+项目依赖如下：
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  file_picker: ^5.2.5
+  fluttertoast: ^8.2.1
+  path_provider: ^2.0.13
+  flutter_easyloading: ^3.0.5
+  ffmpeg_kit_flutter_full_gpl: 4.5.1-LTS
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 使用说明
+
+1、下载并安装`APP`
+
+2、选择要合并的视频和音频
+
+3、点击合并按钮，等待程序执行完成
+
+> 你也可以在电脑端用浏览器（推荐使用Chrome）访问[https://resonant-sfogliatella-f2e046.netlify.app](https://resonant-sfogliatella-f2e046.netlify.app)，上传音视频后完成转换。
+
+## 参考资料
+
+[https://github.com/1iuyuhe/b_cache_video_merge](https://github.com/1iuyuhe/b_cache_video_merge)
+

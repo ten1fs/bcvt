@@ -7,6 +7,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ffmpeg_kit_flutter_full_gpl/ffmpeg_kit.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'BiliBili缓存视频转MP4'),
+      builder: EasyLoading.init(),
     );
   }
 }
@@ -55,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   merge() async {
+    EasyLoading.show(status: 'loading...');
     var dir = await getExternalStorageDirectory();
     var output = '${dir?.path}/output_${DateTime.now().microsecondsSinceEpoch.toString()}.mp4';
     debugPrint('videoPath: $videoPath');
@@ -65,12 +68,15 @@ class _MyHomePageState extends State<MyHomePage> {
       final returnCode = await session.getReturnCode();
       if (ReturnCode.isSuccess(returnCode)) {
         // Success
+        EasyLoading.dismiss();
         Fluttertoast.showToast(msg: 'Success, MP4文件保存在:$output');
       } else if (ReturnCode.isCancel(returnCode)) {
         // Cancel
+        EasyLoading.dismiss();
         Fluttertoast.showToast(msg: '任务被取消！');
       } else {
         // Error
+        EasyLoading.dismiss();
         Fluttertoast.showToast(msg: '执行出错！');
       }
     }, (Log log) {
