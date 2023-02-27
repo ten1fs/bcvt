@@ -49,6 +49,16 @@ dependencies:
 
 > 你也可以在电脑端用浏览器（推荐使用Chrome）访问[https://resonant-sfogliatella-f2e046.netlify.app](https://resonant-sfogliatella-f2e046.netlify.app)，上传音视频后完成转换。
 
+常见问题
+
+B站缓存视频的位置在哪？
+
+`Android/data/tv.danmaku.bili/download/`
+
+转换完成后的MP4文件在哪？
+
+`Android/data/com.example.bcvt/files/`
+
 ## 参考资料
 
 [https://github.com/1iuyuhe/b_cache_video_merge](https://github.com/1iuyuhe/b_cache_video_merge)
