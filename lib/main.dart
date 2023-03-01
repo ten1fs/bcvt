@@ -68,14 +68,17 @@ class _MyHomePageState extends State<MyHomePage> {
       final returnCode = await session.getReturnCode();
       if (ReturnCode.isSuccess(returnCode)) {
         // Success
+        FilePicker.platform.clearTemporaryFiles();
         EasyLoading.dismiss();
         Fluttertoast.showToast(msg: 'Success, MP4文件保存在:$output');
       } else if (ReturnCode.isCancel(returnCode)) {
         // Cancel
+        FilePicker.platform.clearTemporaryFiles();
         EasyLoading.dismiss();
         Fluttertoast.showToast(msg: '任务被取消！');
       } else {
         // Error
+        FilePicker.platform.clearTemporaryFiles();
         EasyLoading.dismiss();
         Fluttertoast.showToast(msg: '执行出错！');
       }
